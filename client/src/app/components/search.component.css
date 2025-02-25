@@ -1,0 +1,7 @@
+.gamesList:has(tr) {
+    border: 1px solid black;
+}
+.gamesList td {
+    padding: 2vh 2vw;
+    border: 1px solid black;
+}
