@@ -20,7 +20,8 @@ const appRoutes: Routes = [
     AppComponent, SearchComponent, DetailsComponent
   ],
   imports: [
-    BrowserModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes, { useHash: true }) 
+    // useHash - fixes CSR problems (whitelabel on server side) on parameterized resources (pages) on reload/navigation thru browser 
   ],
   providers: [ provideHttpClient(), BGGService ],
   bootstrap: [AppComponent]
